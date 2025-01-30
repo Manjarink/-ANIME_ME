@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="me.css">
+</head>
+<body>
+    <nav class="navbar">
+        <span class="navbar-brand">@ANIME_ME</span>
+        <div class="search-container" style="margin-left:70%">
+            <input type="text" class="search-input" placeholder="Search...">
+        
+            <button class="search-button">Search</button>
+        </div>
+    </nav>
+<div class="bagimg">
+    <section class="form-section">
+        <form onsubmit="return mydata()" action="my.html">
+            <label>Username:<span style="color: red;">*</span></label>
+            <input type="text" id="n1" name="username">
+            
+            <br><br>
+            <label>Password:<span style="color: red;">*</span></label>
+            <input type="password" id="n2" name="password"><br><br>
+            <input type="submit" value="Login">
+        </form>
+    </section>
+</div>
+<div class="foot"><footer>&copy; All rights reserved </footer></div>
+
+
+    <script>
+        function mydata() 
+        { 
+            var username = document.getElementById("n1").value;
+            var password = document.getElementById("n2").value;
+            if (username == "" || password =="") 
+            {
+                alert("All fields are mandatory");
+                return false;
+            }
+            else if(username.length<=8||password.length<=8)
+            {
+                alert("data length should be minimum 8 ");
+                return false;
+            }
+            else{
+                true;
+            } 
+        }
+    </script>
+</body>
+</html>
